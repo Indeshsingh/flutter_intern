@@ -71,6 +71,7 @@ class ListviewBuilder extends StatelessWidget {
                       margin: const EdgeInsets.all(1.0),
                       padding: const EdgeInsets.all(08),
                       decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
                         color: Colors.green,
                       ),
                       child: Image.asset(AppHelpers.personImage[index])),
