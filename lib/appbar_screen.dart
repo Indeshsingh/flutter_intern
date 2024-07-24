@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_intern/gridviewbuilder_screen.dart';
+import 'package:flutter_intern/helpers/apphelper.dart';
 
-class AppbarScreen extends StatelessWidget {
+class AppbarScreen extends StatefulWidget {
   const AppbarScreen({super.key});
 
+  @override
+  State<AppbarScreen> createState() => _AppbarScreenState();
+}
+
+class _AppbarScreenState extends State<AppbarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +47,7 @@ class ListviewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: 10,
+      itemCount: AppHelpers.personFullname.length,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
           padding: const EdgeInsets.only(right: 8.0, top: 8.0),
@@ -67,14 +73,8 @@ class ListviewBuilder extends StatelessWidget {
                       decoration: const BoxDecoration(
                         color: Colors.green,
                       ),
-                      child: Image.asset(
-                        'assets/pixel.jpg',
-                        height: 0,
-                        width: 0,
-                      )),
-                  const Text(
-                    'Img',
-                  ),
+                      child: Image.asset(AppHelpers.personImage[index])),
+                  Text(AppHelpers.personFullname[index]),
                 ],
               ),
             ),
