@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intern/gridviewbuilder_screen.dart';
 
 class AppbarScreen extends StatelessWidget {
   const AppbarScreen({super.key});
@@ -23,21 +24,9 @@ class AppbarScreen extends StatelessWidget {
       body: const Center(
         child: Padding(
           padding: EdgeInsets.only(left: 8.0),
-          child: Column(
-            // children: [Expanded(child: GridviewBuilder())],
-            // children: [Expanded(child: ListviewBuilder())],
-            children: [
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-              Text("Hello I am learning flutter at PRACAS Infosys"),
-            ],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [Expanded(child: ListviewBuilder())],
           ),
         ),
       ),
@@ -50,13 +39,34 @@ class ListviewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
-        return const ListTile(
-          title: Text('Hello I am learning flutter at PRACAS Infosys'),
-        );
-      },
+    return SizedBox(
+      height: 200,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (BuildContext context, int index) {
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GridviewbuilderScreen()));
+            },
+            child: SizedBox(
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset('assets/pracas.png'),
+                  const Text(
+                    'Pracas Sir',
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
