@@ -21,9 +21,9 @@ class AppbarScreen extends StatelessWidget {
           // Icon(Icons.search)
         ],
       ),
-      body: const Center(
-        child: Padding(
-          padding: EdgeInsets.only(left: 8.0),
+      body: const Padding(
+        padding: EdgeInsets.only(left: 8.0),
+        child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [Expanded(child: ListviewBuilder())],
@@ -39,13 +39,13 @@ class ListviewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (BuildContext context, int index) {
-          return InkWell(
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: 10,
+      itemBuilder: (BuildContext context, int index) {
+        return Padding(
+          padding: const EdgeInsets.only(right: 8.0, top: 8.0),
+          child: InkWell(
             onTap: () {
               Navigator.push(
                   context,
@@ -54,19 +54,33 @@ class ListviewBuilder extends StatelessWidget {
             },
             child: SizedBox(
               width: 100,
+              height: 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset('assets/pracas.png'),
+                  Container(
+                      height: 80,
+                      width: 100,
+                      margin: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(08),
+                      decoration: const BoxDecoration(
+                        color: Colors.green,
+                      ),
+                      child: Image.asset(
+                        'assets/pixel.jpg',
+                        height: 0,
+                        width: 0,
+                      )),
                   const Text(
-                    'Pracas Sir',
+                    'Img',
                   ),
                 ],
               ),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
