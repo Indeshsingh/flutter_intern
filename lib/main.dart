@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intern/appbar_screen.dart';
-import 'package:flutter_intern/new_screen.dart';
+import 'package:flutter_intern/day1/appbar_screen.dart';
 
 void main() {
   runApp(const MyApp());

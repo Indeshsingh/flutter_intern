@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intern/detail_screen.dart';
+import 'package:flutter_intern/day1/detail_screen.dart';
 import 'package:flutter_intern/helpers/apphelper.dart';
 
 class GridviewbuilderScreen extends StatefulWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DetailScreen extends StatefulWidget {
   final String personFullName;
@@ -29,8 +28,8 @@ class _DetailScreenState extends State<DetailScreen> {
           children: [
             Image.asset(widget.personImage),
             Text("Person name is: ${widget.personFullName}"),
-            Text("Person name is: ${widget.personAge}"),
-            Text("Person name is: ${widget.personAddress}"),
+            Text("Person age is: ${widget.personAge}"),
+            Text("Person address is: ${widget.personAddress}"),
           ],
         ),
       ),
