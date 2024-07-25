@@ -50,4 +50,53 @@ class AppHelpers {
     "assets/pracas.png",
     "assets/pracas.png",
   ];
+  static const List<String> peopleImage = [
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+    "assets/indesh.jpg",
+  ];
+  static const List<String> peopleName = [
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+    "Indesh Singh",
+  ];
+
+  static const List<String> peopleDescription = [
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+    "Hi, I am Indesh Singh currently learning Flutter at Pracas Infosys.Today i am learning about pageview widget and clipoval widget and add images on it.",
+  ];
+  static const List<String> peopleAddress = [
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+    "Biratnagar",
+  ];
 }
