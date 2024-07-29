@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,15 +8,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(right: 90.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
                 width: 300,
-                height: 250,
+                height: 195,
                 child: Card(
-                  margin: const EdgeInsets.all(16.0),
+                  margin: const EdgeInsets.all(20.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13.0),
                   ),
@@ -26,17 +25,19 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.blueAccent,
                   elevation: 10.0,
                   semanticContainer: true,
-                  shadowColor: Colors.red,
+                  shadowColor: const Color.fromARGB(255, 125, 32, 32),
                   child: Row(
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
+                          padding: const EdgeInsets.only(
+                            right: 9.0,
+                          ),
                           child: Image.asset(
                             'assets/silent.png',
                             width: 150,
                             height: 150,
-                            // fit: BoxFit.cover,
+                            fit: BoxFit.contain,
                           ),
                         ),
                       ),
@@ -44,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                         height: 20,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(right: 9.0),
+                        padding: EdgeInsets.only(right: 7.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -53,8 +54,36 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             Text(
+                              'Author:Alex Michaelides',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
                               "Price: 400",
                               style: TextStyle(color: Colors.white),
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.star_border_purple500_sharp,
+                                  size: 20,
+                                  color: Colors.amber,
+                                ),
+                                Icon(
+                                  Icons.star_border_purple500_sharp,
+                                  size: 20,
+                                  color: Colors.amber,
+                                ),
+                                Icon(
+                                  Icons.star_border_purple500_sharp,
+                                  size: 20,
+                                  color: Colors.amber,
+                                ),
+                                Icon(
+                                  Icons.star_border_purple500_sharp,
+                                  size: 20,
+                                  color: Colors.amber,
+                                )
+                              ],
                             )
                           ],
                         ),

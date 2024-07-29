@@ -11,7 +11,7 @@ class LibraryScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'This is page 2',
+              'Library',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             )
           ],

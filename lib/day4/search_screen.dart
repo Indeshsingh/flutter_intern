@@ -11,7 +11,7 @@ class SearchScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'This is page 3',
+              'Search ',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             )
           ],

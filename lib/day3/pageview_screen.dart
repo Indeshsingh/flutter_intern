@@ -35,7 +35,7 @@ class _PageviewScreenState extends State<PageviewScreen> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                          ),
+                          ), // it is used for circle the image
                           const SizedBox(
                             height: 10,
                           ),
@@ -45,7 +45,7 @@ class _PageviewScreenState extends State<PageviewScreen> {
                         ],
                       ),
                     );
-                  }),
+                  }), // it is used for  creates a scrollable list that works page by page using widgets that are created on demand
               // child: PageView(
               //   children: [
               //     Column(

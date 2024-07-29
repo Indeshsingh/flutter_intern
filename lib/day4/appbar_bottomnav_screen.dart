@@ -31,6 +31,7 @@ class _AppbarBottomnavScreenState extends State<AppbarBottomnavScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 80,
         backgroundColor: Colors.black26,
         leading: Image.asset('assets/pracas.png'),
         title: const Text('PRACAS Infosys'),
@@ -42,7 +43,7 @@ class _AppbarBottomnavScreenState extends State<AppbarBottomnavScreen> {
               height: 35,
               child: Image.asset('assets/indesh.jpg'),
             ),
-          )
+          ) // it is used for circle the image
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -72,7 +73,7 @@ class _AppbarBottomnavScreenState extends State<AppbarBottomnavScreen> {
       body: IndexedStack(
         index: _selectedIndex,
         children: _Pages,
-      ),
+      ), //it is is used to display a single child from a list of children at a given index.
     );
   }
 }

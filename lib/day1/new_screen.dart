@@ -24,7 +24,7 @@ class _NewScreenState extends State<NewScreen> {
             ],
           );
         },
-      ),
+      ), // it is used for creating large number of items using scrollable list
     );
   }
 }

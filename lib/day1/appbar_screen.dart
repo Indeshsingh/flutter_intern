@@ -63,7 +63,6 @@ class ListviewBuilder extends StatelessWidget {
               height: 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                       height: 80,
@@ -79,7 +78,7 @@ class ListviewBuilder extends StatelessWidget {
                 ],
               ),
             ),
-          ),
+          ), // it is used for navigate one screen to another screen
         );
       },
     );
