@@ -25,7 +25,7 @@ class _FormScreenState extends State<FormScreen> {
   String? city;
   String? password;
   String? confirmpassword;
-  // final _formKey = GlobalKey<FormState>();
+
   void _saveFormData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> formData = [
@@ -62,12 +62,13 @@ class _FormScreenState extends State<FormScreen> {
                 height: 20,
               ),
               TextFormField(
-                // validator: (value) {
-                //   if (value == null || value.isEmpty) {
-                //     return 'Please enter your firstname';
-                //   }
-                //   return null;
-                // },
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your Firstname';
+                  }
+                  return null;
+                },
                 controller: _controllerFirstName,
                 decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.person),
