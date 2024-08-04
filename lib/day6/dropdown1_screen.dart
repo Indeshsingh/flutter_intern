@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DropdownScreen extends StatefulWidget {
-  const DropdownScreen({super.key});
+class Dropdown1Screen extends StatefulWidget {
+  const Dropdown1Screen({super.key});
 
   @override
-  State<DropdownScreen> createState() => _DropdownScreenState();
+  State<Dropdown1Screen> createState() => _Dropdown1ScreenState();
 }
 
-class _DropdownScreenState extends State<DropdownScreen> {
+class _Dropdown1ScreenState extends State<Dropdown1Screen> {
   String dropdownValue = 'Item1';
   Color _buttonColor = Colors.black;
 

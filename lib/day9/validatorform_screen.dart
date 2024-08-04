@@ -148,6 +148,10 @@ class _ValidatorformScreenState extends State<ValidatorformScreen> {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Please enter your email';
+                        } else if (!RegExp(
+                                r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$')
+                            .hasMatch(value)) {
+                          return 'Please enter a valid email ';
                         }
                         return null;
                       },
@@ -210,12 +214,14 @@ class _ValidatorformScreenState extends State<ValidatorformScreen> {
                       controller: _controllerPassword,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (value) {
+                        RegExp regex = RegExp(
+                            r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
                         if (value!.isEmpty) {
                           return 'Please enter your password';
                         } else if (value.length < 6) {
                           return 'Password must be at least 6 characters long';
-                        } else if (value != value.toUpperCase()) {
-                          return 'Must be in uppercase';
+                        } else if (!regex.hasMatch(value)) {
+                          return 'Pwd should contain at least one upper,lower,digit & Special character';
                         }
                         return null;
                       },
@@ -234,6 +240,8 @@ class _ValidatorformScreenState extends State<ValidatorformScreen> {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Please confirm your password';
+                        } else if (value != _controllerPassword.text) {
+                          return 'Not Match';
                         }
                         return null;
                       },
